@@ -129,7 +129,9 @@ h1, h2, h3, h4, h5, h6 {
       margin-right: 2.8%; }
     .container .catalog-flex .catalog {
       width: 48.6%;
-      max-width: 380px; }
+      max-width: 380px;
+      cursor: pointer;
+      margin-bottom: 56px; }
       .container .catalog-flex .catalog .product__img {
         width: 100%;
         height: 218px;
@@ -174,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
       .container .catalog-flex .catalog .product-box .flight {
         background: #CB0037;
         border-radius: 3px;
-        margin: 12px 0 56px 0;
+        margin: 12px 0 0;
         width: 130px;
         height: 17px; }
         .container .catalog-flex .catalog .product-box .flight__text {

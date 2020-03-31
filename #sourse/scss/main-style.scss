@@ -49,6 +49,8 @@
         .catalog {
             width: 48.6%;
             max-width: 380px;
+            cursor: pointer;
+            margin-bottom: 56px;
             .product {
                 &__img {
                     width: 100%;
@@ -104,7 +106,7 @@
                 .flight {
                     background: #CB0037;
                     border-radius: 3px;
-                    margin: 12px 0 56px 0;
+                    margin: 12px 0 0;
                     width: 130px;
                     height: 17px;
                     &__text {
