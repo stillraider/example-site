@@ -1,0 +1,249 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+/*--------------------*/
+@font-face {
+  font-family: 'MuseoSansCyrl';
+  src: url("../fonts/MuseoSansCyrl.otf"); }
+
+@font-face {
+  font-family: 'MuseoSansCyrl_3';
+  src: url("../fonts/MuseoSansCyrl_3.otf"); }
+
+@font-face {
+  font-family: 'MuseoSansCyrl_2';
+  src: url("../fonts/MuseoSansCyrl_2.otf"); }
+
+@font-face {
+  font-family: 'MuseoSansCyrl_1';
+  src: url("../fonts/MuseoSansCyrl_1.otf"); }
+
+@font-face {
+  font-family: 'MuseoSansCyrl_0';
+  src: url("../fonts/MuseoSansCyrl_0.otf"); }
+
+.nav {
+  background: #FFD241;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 70px; }
+  .nav .burger {
+    width: 30px;
+    display: table;
+    padding-right: 23px;
+    cursor: pointer; }
+    .nav .burger__items {
+      background: #000000;
+      margin-bottom: 4px;
+      width: 30px;
+      height: 5px; }
+    .nav .burger__items:last-child {
+      margin-bottom: 0; }
+
+.container {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto; }
+  .container .title {
+    text-align: center; }
+    .container .title__text {
+      font-family: "MuseoSansCyrl_3";
+      text-transform: uppercase;
+      margin: 46px 0;
+      font-size: 36px;
+      line-height: 43px;
+      color: #000000; }
+  .container .catalog-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .container .catalog-flex .catalog:nth-child(1), .container .catalog-flex .catalog:nth-child(3) {
+      margin-right: 2.8%; }
+    .container .catalog-flex .catalog {
+      width: 48.6%;
+      max-width: 380px; }
+      .container .catalog-flex .catalog .product__img {
+        width: 100%;
+        height: 218px;
+        -o-object-fit: cover;
+        object-fit: cover; }
+      .container .catalog-flex .catalog .product__price {
+        font-family: "MuseoSansCyrl_3";
+        background-color: #ffd141;
+        margin-top: 176px;
+        width: 160px;
+        text-align: center;
+        z-index: 1;
+        position: absolute;
+        padding: 14px 0;
+        color: #000; }
+      .container .catalog-flex .catalog .product-box__country {
+        font-family: "MuseoSansCyrl_3";
+        text-transform: uppercase;
+        font-size: 9px;
+        margin-top: 10px;
+        color: #C5B223; }
+      .container .catalog-flex .catalog .product-box__title {
+        font-family: "MuseoSansCyrl_3";
+        font-size: 18px;
+        margin-top: 7px;
+        color: #000000; }
+      .container .catalog-flex .catalog .product-box__info {
+        font-family: "MuseoSansCyrl_3";
+        width: 100%;
+        max-width: 350px;
+        font-size: 9px;
+        margin-top: 20px;
+        color: #8C8C8C; }
+      .container .catalog-flex .catalog .product-box .block-info__date {
+        font-family: "MuseoSansCyrl_3";
+        font-size: 9px;
+        margin-top: 15px;
+        color: #000000; }
+      .container .catalog-flex .catalog .product-box .block-info__date:nth-child(2) {
+        margin-top: 2px; }
+      .container .catalog-flex .catalog .product-box .flight {
+        background: #CB0037;
+        border-radius: 3px;
+        margin: 12px 0 56px 0;
+        width: 130px;
+        height: 17px; }
+        .container .catalog-flex .catalog .product-box .flight__text {
+          font-family: "MuseoSansCyrl_3";
+          text-align: center;
+          font-size: 9px;
+          padding: 4px 0;
+          color: #FFFFFF; }
+  .container .about-us__text {
+    font-family: "MuseoSansCyrl_3";
+    text-transform: uppercase;
+    font-size: 10px;
+    color: #000000; }
+  .container .about-us__underline {
+    width: 84px;
+    height: 2px;
+    margin-top: 5px;
+    background: #000000; }
+  .container .set .contant-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 31px; }
+    .container .set .contant-center .input-info__name {
+      text-transform: uppercase;
+      font-family: "MuseoSansCyrl_3";
+      font-size: 10px;
+      line-height: 12px;
+      margin-bottom: 8px;
+      color: #000000; }
+    .container .set .contant-center .input-info__inp {
+      background: #FFFFFF;
+      font-family: "MuseoSansCyrl";
+      font-size: 10px;
+      padding-left: 19px;
+      color: #8C8C8C;
+      width: 380px;
+      height: 50px;
+      margin-right: 20px;
+      border: 1px solid #E7E7E7;
+      border-radius: 3px; }
+    .container .set .contant-center .input-info__country {
+      font-family: "MuseoSansCyrl";
+      font-size: 10px;
+      line-height: 12px;
+      color: #CB0037; }
+    .container .set .contant-center .input-info .red-star {
+      color: #CB0037;
+      margin-left: 3px; }
+  .container .about-communication {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .container .about-communication__items:nth-child(1) {
+      margin-right: 116px; }
+    .container .about-communication .choice .social-network:nth-child(4) {
+      margin-right: 0; }
+    .container .about-communication .choice .social-network {
+      display: inline-block;
+      margin-right: 30px; }
+      .container .about-communication .choice .social-network__text {
+        text-align: center;
+        margin-bottom: 9px;
+        font-family: "MuseoSansCyrl_3";
+        text-transform: uppercase;
+        font-size: 10px;
+        color: #000000; }
+      .container .about-communication .choice .social-network__choose {
+        background: #FFFFFF;
+        width: 40px;
+        height: 40px;
+        margin: 0 auto;
+        border: 1px solid #E7E7E7;
+        border-radius: 3px; }

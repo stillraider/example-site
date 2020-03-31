@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" href="css/main-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="nav">
+        <div class="burger">
+            <div class="burger__items"></div>
+            <div class="burger__items"></div>
+            <div class="burger__items"></div>
+        </div>
+    </header>
+    <section class="traveling">
+        <div class="container">
+            <div class="title">
+                <p class="title__text">зимбабве</p>
+            </div>
+            <div class="catalog-flex">
+                <div class="catalog">
+                    <div class="product">
+                        <div class="product__price"><p>от 118 112 Р</p></div>
+                        <img src="images/687_anons-min_480_275_5_90.svg" class="product__img" alt="">
+                    </div>
+                    <div class="product-box">
+                        <p class="product-box__country">италия</p>
+                        <p class="product-box__title">Под небом Тосканы</p>
+                        <p class="product-box__info">Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо — Кортона — (Пиенца) - (Монтепульчано)</p>
+                        <div class="block-info">
+                            <p class="block-info__date">8 дней / 7 ночей Русский язык</p>
+                            <p class="block-info__date">27.04.19 - 04.05.19 и еще 15 дат</p>
+                        </div>
+                        <div class="flight"><p class="flight__text">Авиаперелет включен!</p></div>
+                    </div>
+                </div>
+                <div class="catalog">
+                    <div class="product">
+                        <div class="product__price"><p>от 118 112 Р</p></div>
+                        <img src="images/430_anons_480_275_5_90.svg" class="product__img" alt="">
+                    </div>
+                    <div class="product-box">
+                        <p class="product-box__country">исландия</p>
+                        <p class="product-box__title">Майские каникулы в Исландии</p>
+                        <p class="product-box__info">Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс — Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик</p>
+                        <div class="block-info">
+                            <p class="block-info__date">8 дней / 7 ночей     Русский язык</p>
+                            <p class="block-info__date">27.04.19 - 04.05.19</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog">
+                    <div class="product">
+                        <div class="product__price"><p>от 118 112 Р</p></div>
+                        <img src="images/640anons_480_275_5_90.svg" class="product__img" alt="">
+                    </div>
+                    <div class="product-box">
+                        <p class="product-box__country">италия</p>
+                        <p class="product-box__title">Под небом Тосканы</p>
+                        <p class="product-box__info">Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос — Троя — Стамбул</p>
+                        <div class="block-info">
+                            <p class="block-info__date">8 дней / 7 ночей     Русский язык</p>
+                            <p class="block-info__date">28.04.19 - 05.05.19и еще 3 даты</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog">
+                    <div class="product">
+                        <div class="product__price"><p>от 118 112 Р</p></div>
+                        <img src="images/117_anons-min_480_275_5_90.svg" class="product__img" alt="">
+                    </div>
+                    <div class="product-box">
+                        <p class="product-box__country">италия</p>
+                        <p class="product-box__title">Под небом Тосканы</p>
+                        <div class="block-info">
+                            <p class="block-info__date">8 дней / 7 ночей Русский язык</p>
+                            <p class="block-info__date">27.04.19 - 04.05.19 и еще 15 дат</p>
+                        </div>
+                        <div class="flight"><p class="flight__text">Гарантированный тур!</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="request">
+        <div class="container">
+            <div class="title">
+                <p class="title__text" style="margin: 14px 0;">Заявка на подбор путеешествия</p>
+            </div>
+            <div class="set">
+                <div class="about-us">
+                    <p class="about-us__text">немного о нас</p>
+                    <div class="about-us__underline"></div>
+                </div>
+                <div class="contant-center">
+                    <div class="input-info">
+                        <p class="input-info__name">имя<span class="red-star">*</span></p>
+                        <input type="text" class="input-info__inp" required>
+                    </div>
+                    <div class="input-info">
+                        <p class="input-info__name">телефон</p>
+                        <input type="text" class="input-info__inp" id="phone" required placeholder="+7___ ___ __ __">
+                    </div>
+                </div>
+            </div>
+            <div class="set">
+                <div class="about-us">
+                    <p class="about-us__text">о путешествии</p>
+                    <div class="about-us__underline"></div>
+                </div>
+                <div class="contant-center">
+                    <div class="input-info">
+                        <p class="input-info__name">куда и когда хотите поехать?<span class="red-star">*</span></p>
+                        <input type="text" class="input-info__inp" placeholder="Континент, страна или город" required>
+                        <span class="input-info__country">Укажите континент, страну или город</span>
+                    </div>
+                    <div class="input-info">
+                        <p class="input-info__name">когда?</p>
+                        <input type="text" class="input-info__inp" required placeholder="Даты или временной  интервал">
+                    </div>
+                </div>
+            </div>
+            <div class="about-communication">
+                <div class="about-communication__items">
+                    <div class="about-us">
+                        <p class="about-us__text">удобный способ связи</p>
+                        <div class="about-us__underline"></div>
+                    </div>
+                    <div class="choice">
+                        <div class="social-network">
+                            <p class="social-network__text">viber</p>
+                            <div class="social-network__choose">
+        
+                            </div>
+                        </div>
+                        <div class="social-network">
+                            <p class="social-network__text">whatsapp</p>
+                            <div class="social-network__choose">
+        
+                            </div>
+                        </div>
+                        <div class="social-network">
+                            <p class="social-network__text">почта</p>
+                            <div class="social-network__choose">
+        
+                            </div>
+                        </div>
+                        <div class="social-network">
+                            <p class="social-network__text">телефон</p>
+                            <div class="social-network__choose">
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-communication__items">
+                    <div class="about-us">
+                        <p class="about-us__text">удобный способ связи</p>
+                        <div class="about-us__underline"></div>
+                    </div>
+                    <div class="choice">
+                        <div class="social-network" style="margin-right: 2px;">
+                            <p class="social-network__text">интернет</p>
+                            <div class="social-network__choose">
+        
+                            </div>
+                        </div>
+                        <div class="social-network" style="margin-right: 0;">
+                            <p class="social-network__text">рекомендовали<br> друзья</p>
+                            <div class="social-network__choose">
+        
+                            </div>
+                        </div>
+                        <div class="social-network" style="margin-right: 20px;">
+                            <p class="social-network__text">соц. сети</p>
+                            <div class="social-network__choose">
+        
+                            </div>
+                        </div>
+                        <div class="social-network">
+                            <p class="social-network__text">уже ездил</p>
+                            <div class="social-network__choose">
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
