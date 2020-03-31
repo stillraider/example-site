@@ -133,39 +133,40 @@
             <div class="title">
                 <p class="title__text" style="margin: 14px 0 55px 0;">Заявка на подбор путеешествия</p>
             </div>
-            <div class="set">
-                <div class="about-us">
-                    <p class="about-us__text">немного о нас</p>
-                    <div class="about-us__underline"></div>
-                </div>
-                <div class="contant-center">
-                    <div class="input-info">
-                        <p class="input-info__name">имя<span class="red-star">*</span></p>
-                        <input type="text" class="input-info__inp" required>
+            <form action="">
+                <div class="set">
+                    <div class="about-us">
+                        <p class="about-us__text">немного о нас</p>
+                        <div class="about-us__underline"></div>
                     </div>
-                    <div class="input-info">
-                        <p class="input-info__name">телефон</p>
-                        <input type="text" class="input-info__inp" id="phone" placeholder="+7___ ___ __ __">
-                    </div>
-                </div>
-            </div>
-            <div class="set">
-                <div class="about-us">
-                    <p class="about-us__text">о путешествии</p>
-                    <div class="about-us__underline"></div>
-                </div>
-                <div class="contant-center">
-                    <div class="input-info">
-                        <p class="input-info__name">куда и когда хотите поехать?<span class="red-star">*</span></p>
-                        <input type="text" class="input-info__inp" placeholder="Континент, страна или город" required>
-                        <span class="input-info__country">Укажите континент, страну или город</span>
-                    </div>
-                    <div class="input-info">
-                        <p class="input-info__name">когда?</p>
-                        <input type="text" class="input-info__inp" placeholder="Даты или временной  интервал">
+                    <div class="contant-center">
+                        <label class="input-info">
+                            <p class="input-info__name">имя<span class="red-star">*</span></p>
+                            <input required class="input-info__inp" type="text">
+                        </label>
+                        <label class="input-info">
+                            <p class="input-info__name">телефон</p>
+                            <input type="text" class="input-info__inp" id="phone" placeholder="+7___ ___ __ __">
+                        </label>
                     </div>
                 </div>
-            </div>
+                <div class="set">
+                    <div class="about-us">
+                        <p class="about-us__text">о путешествии</p>
+                        <div class="about-us__underline"></div>
+                    </div>
+                    <div class="contant-center">
+                        <label class="input-info">
+                            <p class="input-info__name">куда и когда хотите поехать?<span class="red-star">*</span></p>
+                            <input required class="input-info__inp" type="text" placeholder="Континент, страна или город">
+                            <span class="input-info__country">Укажите континент, страну или город</span>
+                        </label>
+                        <label class="input-info">
+                            <p class="input-info__name">когда?</p>
+                            <input type="text" class="input-info__inp" placeholder="Даты или временной  интервал">
+                        </label>
+                    </div>
+                </div>
             <div class="about-communication">
                 <div class="about-communication__items">
                     <div class="about">
@@ -255,12 +256,8 @@
                     <p class="fields__text"><span class="red-stars">*</span>Поля, которые надо обязательно заполнить</p>
                 </div>
             </div>
-            <div class="sending">
-                <p class="sending__text">отправить</p>
-                <div>
-
-                </div>
-            </div>
+            <input type="submit" class="sending" value="отправить">
+            </form>
         </div>
     </section>
 </body>
