@@ -441,7 +441,7 @@ h1, h2, h3, h4, h5, h6 {
               padding-top: 30px !important;
               padding: 0 15px;
               width: 280px;
-              z-index: 50;
+              z-index: 40;
               border-radius: 0 0 30px 30px; }
               .over-menu .menu .info-tab .view-menu .contant-review .main-menu .calendar__text {
                 font-family: "MuseoSansCyrl_1";
@@ -475,17 +475,13 @@ h1, h2, h3, h4, h5, h6 {
                 background: #FFD241;
                 border: 1px solid black;
                 color: black; }
-            .over-menu .menu .info-tab .view-menu .contant-review .main-menu .small-block:nth-child(1) {
-              position: relative;
-              z-index: 51; }
-            .over-menu .menu .info-tab .view-menu .contant-review .main-menu .small-block:nth-child(2) {
-              position: relative;
-              z-index: 41; }
             .over-menu .menu .info-tab .view-menu .contant-review .main-menu .small-block {
               display: -webkit-box;
               display: -ms-flexbox;
               display: flex;
               padding: 16px 0 19px 30px;
+              position: relative;
+              z-index: 51;
               border-radius: 29.5px; }
               .over-menu .menu .info-tab .view-menu .contant-review .main-menu .small-block .wrap {
                 margin-left: auto;
@@ -509,10 +505,6 @@ h1, h2, h3, h4, h5, h6 {
                 font-size: 12px;
                 line-height: 14px;
                 color: #000000; }
-            .over-menu .menu .info-tab .view-menu .contant-review .main-menu .drop:nth-child(1) {
-              z-index: 50; }
-            .over-menu .menu .info-tab .view-menu .contant-review .main-menu .drop:nth-child(2) {
-              z-index: 40; }
             .over-menu .menu .info-tab .view-menu .contant-review .main-menu .drop {
               width: 280px;
               height: 315px;
@@ -522,6 +514,7 @@ h1, h2, h3, h4, h5, h6 {
               -ms-transform: translate(0px, -20px);
               transform: translate(0px, -20px);
               padding-top: 30px;
+              z-index: 50;
               display: none;
               border-radius: 0 0 30px 30px;
               overflow: scroll;
