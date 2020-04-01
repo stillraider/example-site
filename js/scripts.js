@@ -53,13 +53,32 @@ function Calendar2(id, year, month) {
 
 
 var classik = document.getElementsByClassName("main-menu");
-var drop = document.getElementsByClassName("dropped-list");
+var drop = document.getElementsByClassName("drop");
 var pip = true;
+var tyu = true;
 var countrys = document.getElementsByClassName("countrys");
 var shift = document.getElementsByClassName("small-block__shift");
 var calind = document.getElementsByClassName("calendar");
 var travels = document.getElementsByClassName("travels");
 var journey = document.getElementsByClassName("journey");
+var over = document.getElementsByClassName("over-menu");
+var htm = document.getElementsByTagName("body");
+
+function cros(param) {
+    if (tyu) {
+        over[0].style.pointerEvents = "none";
+        over[0].style.opacity = "0";
+
+    }
+}
+
+function ascent(param) {
+    if (pip) {
+        over[0].style.pointerEvents = "all";
+        over[0].style.opacity = "1";
+
+    }
+}
 
 function press(param) {
     if (pip) {
@@ -88,16 +107,10 @@ function trav(params) {
 function pressing(params) {
     if (pip) {
         classik[1].style.borderRadius = "29.5px 29.5px 0 0";
-        classik[1].style.position = "absolute";
-        classik[1].style.width = "274px";
-        classik[1].style.margin = "0 0 0 160px";
         calind[0].style.display = "block";
     }
     else {
         classik[1].style.borderRadius = "29.5px";
-        classik[1].style.position = "initial";
-        classik[1].style.width = "120px";
-        classik[1].style.margin = "0";
         calind[0].style.display = "none";
     }
     pip = !pip;

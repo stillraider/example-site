@@ -248,8 +248,7 @@
     }
     .inquiries {
         .confirm {
-            display: -webkit-box;
-            display: -ms-flexbox;
+            display: flex;
             margin-top: 39px;
             cursor: pointer;
             &:hover .confirm__agreement {
@@ -319,270 +318,347 @@
         color: #000000;
     }
 }
-.menu {
+.over-menu {
+    background: rgba(0, 0, 0, 0.3);
+    transition: all .4s ease-in-out;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    width: 50%;
-    z-index: 50;
-    height: 100vh;
-    background: #FFD241;
+    z-index: 40;
     display: flex;
-    justify-content: center;
-    .info-tab {
-        margin-top: 101px;
-        .view-menu {
-            margin-bottom: 68px;
-            .contant-review {
-                display: flex;
-                .main-menu:last-child {
-                    width: 120px;
-                    margin-right: 0;
+    justify-content: flex-end;
+    pointer-events: none;
+    opacity: 0;
+    .menu {
+        width: 50%;
+        z-index: 50;
+        height: 100vh;
+        position: relative;
+        background: #FFD241;
+        display: flex;
+        justify-content: center;
+        .cross {
+            position: absolute;
+            cursor: pointer;
+            right: 23px;
+            top: 23px;
+            .close {
+                margin: 10px 0;
+                &__items:first-child {
+                    transform: rotate(135deg);
+                    margin-bottom: -5px;
                 }
-                .main-menu {
-                    width: 150px;
-                    cursor: pointer;
-                    align-items: center;
-                    height: 49px;
-                    background: white;
-                    margin-right: 10px;
-                    border-radius: 29.5px;
-                    .calendar {
-                        display: none;
-                        position: absolute;
+                &__items {
+                    width: 30px;
+                    height: 5px;
+                    background: #FFFFFF;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+        .info-tab {
+            margin-top: 101px;
+            width: 280px;
+            display: flex;
+            flex-direction: column;
+            .view-menu {
+                pointer-events: none;
+                margin-bottom: 68px;
+                width: 100%;
+                .contant-review {
+                    display: flex;
+                    width: 100%;
+                    .main-menu:last-child {
+                        width: 42.86%;
+                        max-width: 120px;
+                        margin-right: 0;
+                    }
+                    .main-menu {
+                        width: 53.58%;
+                        max-width: 150px;
+                        cursor: pointer;
+                        align-items: center;
+                        height: 49px;
                         background: white;
-                        padding: 0 10px;
-                        z-index: 50;
+                        margin-right: 10px;
+                        border-radius: 29.5px;
+                        .calendar {
+                            display: none;
+                            position: absolute;
+                            background: white;
+                            padding: 0 15px;
+                            width: 280px;
+                            z-index: 50;
+                            border-radius: 0 0 30px 30px;
+                            &__text {
+                                font-family: "MuseoSansCyrl_1";
+                                font-size: 12px;
+                                line-height: 14px;
+                                text-align: center;
+                                margin-bottom: 18px;
+                                color: #000000;
+                            }
+                            #calendar2 {
+                                width: 100%;
+                                font: monospace;
+                                line-height: 1.2em;
+                                font-size: 15px;
+                                text-align: center;
+                                & tr td {
+                                    padding: 8px;
+                                    font-family: "MuseoSansCyrl_1";
+                                }
+                            }
+                            #calendar2 thead tr:last-child {
+                                font-size: small;
+                                color: black;
+                            }
+                            #calendar2 thead tr:nth-child(1) td:nth-child(2) {
+                                color: black;
+                                font-family: "MuseoSansCyrl_1";
+                            }
+                            #calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+                                cursor: pointer;
+                            }
+                            #calendar2 tbody td {
+                                color: black;
+                            }
+                            #calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+                                color: black;
+                            }
+                            #calendar2 tbody td.today {
+                                background: #FFD241;
+                                border: 1px solid black;
+                                color: black;
+                            }
+                        }
+                        .small-block {
+                            display: flex;
+                            padding: 16px 0 19px 30px;
+                            border-radius: 29.5px;
+                            .wrap {
+                                margin-left: auto;
+                                margin-right: 30px;
+                                &__shift {
+                                    width: 5px;
+                                    height: 5px;
+                                    margin: 4px 0 0 8px;
+                                    border-left: 1px solid rgb(24, 22, 22);
+                                    border-top: 1px solid rgb(24, 22, 22);
+                                    transform: rotate(-135deg);
+                                    transition: transform .5s ease;
+                                }
+                            }
+                            &__country, &__date{
+                                font-family: "MuseoSansCyrl_1";
+                                font-size: 12px;
+                                line-height: 14px;
+                                color: #000000;
+                            }
+                        }
+                        .drop {
+                            width: 280px;
+                            height: 315px;
+                            position: absolute;
+                            background: white;
+                            width: 280px;
+                            display: none;
+                            z-index: 50;
+                            border-radius: 0 0 30px 30px;
+                            overflow: scroll;
+                            overflow-x: hidden !important;
+                            ::-webkit-scrollbar {
+                                width: 2px;
+                            }
+                            ::-webkit-scrollbar-track {
+                                background: white;
+                            }
+                            ::-webkit-scrollbar-thumb {
+                                height: 10px;
+                                background: #C4C4C4;
+                                border-radius: 1px;
+                            }
+                            .dropped-list {
+                                padding: 0 30px;
+                                .continents {
+                                    &__text {
+                                        font-family: "MuseoSansCyrl_2";
+                                        margin-bottom: 24px;
+                                        font-size: 14px;
+                                        color: #000000;
+                                    }
+                                    .countrys {
+                                        display: none;
+                                        &__items:hover {
+                                            background: rgba(196, 196, 196, 0.3);
+                                        }
+                                        &__items {
+                                            font-family: "MuseoSansCyrl_1";
+                                            border-radius: 15px;
+                                            padding-left: 13px;
+                                            font-size: 14px;
+                                            line-height: 30px;
+                                            color: #000000;
+                                        }
+                                        .all-tours {
+                                            font-family: "MuseoSansCyrl_1";
+                                            margin-left: 13px;
+                                            font-size: 10px;
+                                            margin: 10px 0 10px 15px;
+                                            line-height: 18px;
+                                            text-transform: uppercase;
+                                            color: #FFD241;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .travel {
+                    width: 100%;
+                    max-width: 280px;
+                    .journey {
+                        padding: 0 40px 20px 37px;
+                        display: none;
+                        background: white;
                         border-radius: 0 0 30px 30px;
+                        position: absolute;
+                        width: 280px;
+                        &__items:hover {
+                            background: rgba(196, 196, 196, 0.3);
+                            border-radius: 15px;
+                            cursor: pointer;
+                        }
+                        &__items {
+                            padding-left: 9px;
+                            font-family: "MuseoSansCyrl_1";
+                            font-size: 14px;
+                            line-height: 30px;
+                            color: #000000;
+                        }
+                    }
+                    .travels {
+                        display: flex;
+                        cursor: pointer;
+                        background: white;
+                        height: 49px;
+                        padding: 18px 0px 10px 30px;
+                        border-radius: 29.5px;
+                        margin-top: 18px;
+                        .wrap {
+                            margin-left: auto;
+                            margin-right: 30px;
+                            &__shift {
+                                width: 5px;
+                                height: 5px;
+                                margin: 4px 0 0 8px;
+                                border-left: 1px solid rgb(24, 22, 22);
+                                border-top: 1px solid rgb(24, 22, 22);
+                                transform: rotate(-135deg);
+                                transition: transform .5s ease;
+                            }
+                        }
                         &__text {
                             font-family: "MuseoSansCyrl_1";
                             font-size: 12px;
                             line-height: 14px;
-                            text-align: center;
-                            margin-bottom: 18px;
                             color: #000000;
                         }
-                        #calendar2 {
-                            width: 100%;
-                            font: monospace;
-                            line-height: 1.2em;
-                            font-size: 15px;
-                            text-align: center;
-                            & tr td {
-                                padding: 8px;
-                                font-family: "MuseoSansCyrl_1";
-                            }
-                        }
-                        #calendar2 thead tr:last-child {
-                            font-size: small;
-                            color: black;
-                        }
-                        #calendar2 thead tr:nth-child(1) td:nth-child(2) {
-                            color: black;
-                            font-family: "MuseoSansCyrl_1";
-                        }
-                        #calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
-                            cursor: pointer;
-                        }
-                        #calendar2 tbody td {
-                            color: black;
-                        }
-                        #calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
-                            color: black;
-                        }
-                        #calendar2 tbody td.today {
-                            background: #FFD241;
-                            border: 1px solid black;
-                            color: black;
-                        }
-                    }
-                    .small-block {
-                        display: flex;
-                        padding: 16px 0 19px 30px;
-                        border-radius: 29.5px;
-                        &__country, &__date{
-                            font-family: "MuseoSansCyrl_1";
-                            font-size: 12px;
-                            line-height: 14px;
-                            color: #000000;
-                            padding-right: 40px;
-                        }
-                        &__date {
-                            padding-right: 30px;
-                        }
-                        &__shift {
-                            width: 5px;
-                            height: 5px;
-                            margin: 4px 0 0 8px;
-                            border-left: 1px solid rgb(24, 22, 22);
-                            border-top: 1px solid rgb(24, 22, 22);
-                            transform: rotate(-135deg);
-                            transition: transform .5s ease;
-                        }
-                    }
-                    ::-webkit-scrollbar {
-                        width: 2px;
-                    }
-                    ::-webkit-scrollbar-track {
-                        background: white;
-                    }
-                    ::-webkit-scrollbar-thumb {
-                        height: 10px;
-                        background: #C4C4C4;
-                        border-radius: 1px;
-                    }
-                    .dropped-list {
-                        position: absolute;
-                        background: white;
-                        overflow-x: hidden !important;
-                        height: 315px;
-                        overflow: scroll;
-                        display: none;
-                        padding: 0 10px;
-                        width: 150px;
-                        border-radius: 0 0 30px 30px;
-                        .continents {
-                            &__text {
-                                font-family: "MuseoSansCyrl_2";
-                                margin-bottom: 29px;
-                                font-size: 14px;
-                                color: #000000;
-                            }
-                            .countrys {
-                                display: none;
-                                &__items:hover {
-                                    background: rgba(196, 196, 196, 0.3);
-                                }
-                                &__items {
-                                    font-family: "MuseoSansCyrl_1";
-                                    border-radius: 15px;
-                                    padding-left: 13px;
-                                    font-size: 14px;
-                                    line-height: 30px;
-                                    color: #000000;
-                                }
-                                .all-tours {
-                                    font-family: "MuseoSansCyrl_1";
-                                    margin-left: 13px;
-                                    font-size: 10px;
-                                    margin: 10px 0 10px 15px;
-                                    line-height: 18px;
-                                    text-transform: uppercase;
-                                    color: #FFD241;
-                                }
-                            }
-                        }
                     }
                 }
             }
-            .travel {
-                width: 280px;
-                .journey {
-                    padding: 0 40px 20px 37px;
-                    display: none;
-                    background: white;
-                    border-radius: 0 0 30px 30px;
-                    position: absolute;
-                    width: 280px;
-                    &__items:hover {
-                        background: rgba(196, 196, 196, 0.3);
-                        border-radius: 15px;
-                        cursor: pointer;
-                    }
-                    &__items {
-                        padding-left: 9px;
-                        font-family: "MuseoSansCyrl_1";
-                        font-size: 14px;
-                        line-height: 30px;
-                        color: #000000;
-                    }
-                }
-                .travels {
-                    display: flex;
-                    cursor: pointer;
-                    background: white;
-                    height: 49px;
-                    padding: 18px 0px 10px 30px;
-                    border-radius: 29.5px;
-                    margin-top: 18px;
-                    &__shift {
-                        width: 5px;
-                        height: 5px;
-                        margin-left: 8px;
-                        border-left: 1px solid rgb(24, 22, 22);
-                        border-top: 1px solid rgb(24, 22, 22);
-                        transform: rotate(-135deg);
-                        transition: transform .5s ease;
-                    }
-                    &__text {
-                        font-family: "MuseoSansCyrl_1";
-                        margin-right: 121px;
-                        font-size: 12px;
-                        line-height: 14px;
-                        color: #000000;
-                    }
-                }
-            }
-        }
-        .contact {
-            bottom: 55px;
-            position: absolute;
-            &__phone {
-                font-family: "MuseoSansCyrl_3";
-                font-style: normal;
-                font-weight: bold;
-                font-size: 24px;
-                line-height: 29px;
-                text-align: center;
-                color: #141414;
-                margin-bottom: 24px;
-            }
-            .pick-up {
+            .find-tour {
                 border: 1px solid #000000;
-                box-sizing: border-box;
-                border-radius: 29.5px;
-                cursor: pointer;
                 width: 280px;
-                margin: 0 auto;
-                display: flex;
-                justify-content: center;
+                cursor: pointer;
+                display: none;
                 align-items: center;
-                height: 49px;
+                justify-content: center;
+                border-radius: 29.5px;
                 &__text {
                     font-family: "MuseoSansCyrl_1";
-                    text-transform: uppercase;
                     font-size: 12px;
+                    text-transform: uppercase;
+                    padding: 18px 0;
                     color: #000000;
                 }
             }
+            .contact {
+                &__phone {
+                    font-family: "MuseoSansCyrl_3";
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 24px;
+                    line-height: 29px;
+                    text-align: center;
+                    color: #141414;
+                    margin-bottom: 24px;
+                }
+                .pick-up {
+                    border: 1px solid #000000;
+                    box-sizing: border-box;
+                    border-radius: 29.5px;
+                    cursor: pointer;
+                    width: 100%;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 49px;
+                    &__text {
+                        font-family: "MuseoSansCyrl_1";
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        color: #000000;
+                    }
+                }
+            }
         }
-    }
-    .list-info {
-        &__text {
-            font-family: "MuseoSansCyrl_3";
-            text-transform: uppercase;
-            font-size: 18px;
-            text-align: center;
-            margin-bottom: 30px;
-            color: #141414;
+        .list-info {
+            &__text {
+                font-family: "MuseoSansCyrl_3";
+                text-transform: uppercase;
+                font-size: 18px;
+                text-align: center;
+                margin-bottom: 30px;
+                color: #141414;
+            }
         }
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 900px) {
+    .over-menu {
+        overflow: scroll;
+        .menu {
+            width: 100%;
+            .view-menu {
+                margin-bottom: 0 !important;
+                pointer-events: initial !important;
+            }
+            .find-tour {
+                display: flex !important;
+                margin: 14px 0 30px 0;
+            }
+            .contant-review {
+                display: inherit !important;
+                .main-menu {
+                    width: 100% !important;
+                    max-width: inherit !important;
+                }
+                .main-menu:nth-child(2) {
+                    margin-top: 18px;
+                }
+            }
+        }
+    }
+    .about-communication {
+        &__items:nth-child(2) {
+            width: 49% !important;
+        }
+    }
+}
 @media (max-width: 780px) {
     .about-communication {
         &__items:nth-child(2) {
@@ -628,6 +704,9 @@
     }
 }
 @media (max-width: 430px) {
+    .menu {
+        width: 100%;
+    }
     .container {
         padding: 0 18px;
         .inquiries {

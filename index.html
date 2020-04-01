@@ -8,99 +8,119 @@
     <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/scripts.js" defer></script>
     <link rel="stylesheet" href="css/main-style.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="images/icon/favicon.ico" type="image/x-icon">
+    <title>ZIMBABWE</title>
 </head>
 <body>
-    <div class="menu">
-        <div class="info-tab">
-            <div class="view-menu">
-                <div class="contant-review">
-                    <div class="main-menu">
-                        <div class="small-block"  onclick="press(0)">
-                            <p class="small-block__country">Страны</p>
-                            <div class="small-block__shift"></div>
+    <div class="over-menu">
+        <div class="menu">
+            <div class="cross" onclick="cros(0)">
+                <div class="close">
+                    <div class="close__items"></div>
+                    <div class="close__items"></div>
+                </div>
+            </div>
+            <div class="info-tab">
+                <div class="view-menu">
+                    <div class="contant-review">
+                        <div class="main-menu">
+                            <div class="small-block"  onclick="press(0)">
+                                <p class="small-block__country">Страны</p>
+                                <div class="wrap">
+                                    <div class="wrap__shift"></div>
+                                </div>
+                            </div>
+                            <div class="drop">
+                                <div class="dropped-list">
+                                    <div class="continents">
+                                        <p class="continents__text" onclick="country(0)">Южная Америка</p>
+                                        <ul class="countrys">
+                                            <li class="countrys__items">Аргентина</li>
+                                            <li class="countrys__items">Бразилия</li>
+                                            <li class="countrys__items">Перу</li>
+                                            <li class="countrys__items">Уругвай</li>
+                                            <li class="countrys__items">Чили</li>
+                                            <li class="countrys__items">Эквадор</li>
+                                            <li class="all-tours">все туры на континенте</li>
+                                        </ul>
+                                        <p class="continents__text">Северная Америка</p>
+                                        <p class="continents__text">Арктика и Антарктида</p>
+                                        <p class="continents__text">Африка</p>
+                                        <p class="continents__text">Австралия и Океания</p>
+                                        <p class="continents__text">Европа</p>
+                                        <p class="continents__text">Россия</p>
+                                        <p class="continents__text">Азия</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="dropped-list">
-                            <div class="continents">
-                                <p class="continents__text" onclick="country(0)">Южная Америка</p>
-                                <ul class="countrys">
-                                    <li class="countrys__items">Аргентина</li>
-                                    <li class="countrys__items">Бразилия</li>
-                                    <li class="countrys__items">Перу</li>
-                                    <li class="countrys__items">Уругвай</li>
-                                    <li class="countrys__items">Чили</li>
-                                    <li class="countrys__items">Эквадор</li>
-                                    <li class="all-tours">все туры на континенте</li>
-                                </ul>
-                                <p class="continents__text">Северная Америка</p>
-                                <p class="continents__text">Арктика и Антарктида</p>
-                                <p class="continents__text">Африка</p>
-                                <p class="continents__text">Австралия и Океания</p>
-                                <p class="continents__text">Европа</p>
-                                <p class="continents__text">Россия</p>
-                                <p class="continents__text">Азия</p>
+                        <div class="main-menu">
+                            <div class="small-block" onclick="pressing(0)">
+                                <p class="small-block__date">Даты</p>
+                                <div class="wrap">
+                                    <div class="wrap__shift"></div>
+                                </div>
+                            </div>
+                            <div class="calendar">
+                                <table id="calendar2">
+                                    <thead>
+                                        <tr><td>‹<td colspan="5"><td>›
+                                        <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+                                    <tbody>
+                                </table>
+                                <p class="calendar__text">Выберите дату не позднее которой <br> хотите вернуться</p>
                             </div>
                         </div>
                     </div>
-                    <div class="main-menu">
-                        <div class="small-block" onclick="pressing(0)">
-                            <p class="small-block__date">Даты</p>
-                            <div class="small-block__shift"></div>
+                    <div class="travel">
+                        <div class="travels" onclick="trav(0)">
+                            <p class="travels__text">Тип путешествия</p>
+                            <div class="wrap">
+                                <div class="wrap__shift"></div>
+                            </div>
                         </div>
-                        <div class="calendar">
-                            <table id="calendar2">
-                                <thead>
-                                    <tr><td>‹<td colspan="5"><td>›
-                                    <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
-                                <tbody>
-                            </table>
-                            <p class="calendar__text">Выберите дату не позднее которой <br> хотите вернуться</p>
-                        </div>
+                        <ul class="journey">
+                            <li class="journey__items">Активный</li>
+                            <li class="journey__items">Майские</li>
+                            <li class="journey__items">На авто</li>
+                            <li class="journey__items">На корабле</li>
+                            <li class="journey__items">Новый год</li>
+                            <li class="journey__items">Поход</li>
+                            <li class="journey__items">Серфинг</li>
+                            <li class="journey__items">Эксклюзив</li>
+                            <li class="journey__items">Экскурсионный</li>
+                            <li class="journey__items">Экспедиция</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="travel">
-                    <div class="travels" onclick="trav(0)">
-                        <p class="travels__text">Тип путешествия</p>
-                        <div class="travels__shift"></div>
-                    </div>
-                    <ul class="journey">
-                        <li class="journey__items">Активный</li>
-                        <li class="journey__items">Майские</li>
-                        <li class="journey__items">На авто</li>
-                        <li class="journey__items">На корабле</li>
-                        <li class="journey__items">Новый год</li>
-                        <li class="journey__items">Поход</li>
-                        <li class="journey__items">Серфинг</li>
-                        <li class="journey__items">Эксклюзив</li>
-                        <li class="journey__items">Экскурсионный</li>
-                        <li class="journey__items">Экспедиция</li>
-                    </ul>
+                <div class="find-tour">
+                    <p class="find-tour__text">найти</p>
                 </div>
-            </div>
-            <div class="list-info">
-                <a href="#">
-                    <p class="list-info__text">путешествия</p>
-                </a>
-                <a href="#">
-                    <p class="list-info__text">о нас</p>
-                </a>
-                <a href="#">
-                    <p class="list-info__text">отзывы</p>
-                </a>
-                <a href="#">
-                    <p class="list-info__text">блог</p>
-                </a>
-            </div>
-            <div class="contact">
-                <p class="contact__phone">+7 (495) 123-45-67</p>
-                <div class="pick-up">
-                    <p class="pick-up__text">подберите мне тур</p>
+                <div class="list-info">
+                    <a href="#">
+                        <p class="list-info__text">путешествия</p>
+                    </a>
+                    <a href="#">
+                        <p class="list-info__text">о нас</p>
+                    </a>
+                    <a href="#">
+                        <p class="list-info__text">отзывы</p>
+                    </a>
+                    <a href="#">
+                        <p class="list-info__text">блог</p>
+                    </a>
+                </div>
+                <div class="contact">
+                    <p class="contact__phone">+7 (495) 123-45-67</p>
+                    <div class="pick-up">
+                        <p class="pick-up__text">подберите мне тур</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <header class="nav">
-        <div class="burger">
+        <div class="burger" onclick="ascent(0)">
             <div class="burger__items"></div>
             <div class="burger__items"></div>
             <div class="burger__items"></div>
