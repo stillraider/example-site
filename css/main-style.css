@@ -371,30 +371,157 @@ h1, h2, h3, h4, h5, h6 {
         display: -ms-flexbox;
         display: flex; }
         .menu .info-tab .view-menu .contant-review .main-menu:last-child {
-          width: 120px; }
+          width: 120px;
+          margin-right: 0; }
         .menu .info-tab .view-menu .contant-review .main-menu {
           width: 150px;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
           cursor: pointer;
           -webkit-box-align: center;
           -ms-flex-align: center;
           align-items: center;
+          height: 49px;
           background: white;
           margin-right: 10px;
-          height: 49px;
           border-radius: 29.5px; }
-          .menu .info-tab .view-menu .contant-review .main-menu__country, .menu .info-tab .view-menu .contant-review .main-menu__date {
+          .menu .info-tab .view-menu .contant-review .main-menu .calendar {
+            display: none;
+            position: absolute;
+            background: white;
+            padding: 0 10px;
+            z-index: 50;
+            border-radius: 0 0 30px 30px; }
+            .menu .info-tab .view-menu .contant-review .main-menu .calendar__text {
+              font-family: "MuseoSansCyrl_1";
+              font-size: 12px;
+              line-height: 14px;
+              text-align: center;
+              margin-bottom: 18px;
+              color: #000000; }
+            .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 {
+              width: 100%;
+              font: monospace;
+              line-height: 1.2em;
+              font-size: 15px;
+              text-align: center; }
+              .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 tr td {
+                padding: 8px;
+                font-family: "MuseoSansCyrl_1"; }
+            .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 thead tr:last-child {
+              font-size: small;
+              color: black; }
+            .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 thead tr:nth-child(1) td:nth-child(2) {
+              color: black;
+              font-family: "MuseoSansCyrl_1"; }
+            .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 thead tr:nth-child(1) td:nth-child(1):hover, .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+              cursor: pointer; }
+            .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 tbody td {
+              color: black; }
+            .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 tbody td:nth-child(n+6), .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 .holiday {
+              color: black; }
+            .menu .info-tab .view-menu .contant-review .main-menu .calendar #calendar2 tbody td.today {
+              background: #FFD241;
+              border: 1px solid black;
+              color: black; }
+          .menu .info-tab .view-menu .contant-review .main-menu .small-block {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 16px 0 19px 30px;
+            border-radius: 29.5px; }
+            .menu .info-tab .view-menu .contant-review .main-menu .small-block__country, .menu .info-tab .view-menu .contant-review .main-menu .small-block__date {
+              font-family: "MuseoSansCyrl_1";
+              font-size: 12px;
+              line-height: 14px;
+              color: #000000;
+              padding-right: 40px; }
+            .menu .info-tab .view-menu .contant-review .main-menu .small-block__date {
+              padding-right: 30px; }
+            .menu .info-tab .view-menu .contant-review .main-menu .small-block__shift {
+              width: 5px;
+              height: 5px;
+              margin: 4px 0 0 8px;
+              border-left: 1px solid #181616;
+              border-top: 1px solid #181616;
+              -webkit-transform: rotate(-135deg);
+              -ms-transform: rotate(-135deg);
+              transform: rotate(-135deg);
+              -webkit-transition: -webkit-transform .5s ease;
+              transition: -webkit-transform .5s ease;
+              -o-transition: transform .5s ease;
+              transition: transform .5s ease;
+              transition: transform .5s ease, -webkit-transform .5s ease; }
+          .menu .info-tab .view-menu .contant-review .main-menu ::-webkit-scrollbar {
+            width: 2px; }
+          .menu .info-tab .view-menu .contant-review .main-menu ::-webkit-scrollbar-track {
+            background: white; }
+          .menu .info-tab .view-menu .contant-review .main-menu ::-webkit-scrollbar-thumb {
+            height: 10px;
+            background: #C4C4C4;
+            border-radius: 1px; }
+          .menu .info-tab .view-menu .contant-review .main-menu .dropped-list {
+            position: absolute;
+            background: white;
+            overflow-x: hidden !important;
+            height: 315px;
+            overflow: scroll;
+            display: none;
+            padding: 0 10px;
+            width: 150px;
+            border-radius: 0 0 30px 30px; }
+            .menu .info-tab .view-menu .contant-review .main-menu .dropped-list .continents__text {
+              font-family: "MuseoSansCyrl_2";
+              margin-bottom: 29px;
+              font-size: 14px;
+              color: #000000; }
+            .menu .info-tab .view-menu .contant-review .main-menu .dropped-list .continents .countrys {
+              display: none; }
+              .menu .info-tab .view-menu .contant-review .main-menu .dropped-list .continents .countrys__items:hover {
+                background: rgba(196, 196, 196, 0.3); }
+              .menu .info-tab .view-menu .contant-review .main-menu .dropped-list .continents .countrys__items {
+                font-family: "MuseoSansCyrl_1";
+                border-radius: 15px;
+                padding-left: 13px;
+                font-size: 14px;
+                line-height: 30px;
+                color: #000000; }
+              .menu .info-tab .view-menu .contant-review .main-menu .dropped-list .continents .countrys .all-tours {
+                font-family: "MuseoSansCyrl_1";
+                margin-left: 13px;
+                font-size: 10px;
+                margin: 10px 0 10px 15px;
+                line-height: 18px;
+                text-transform: uppercase;
+                color: #FFD241; }
+      .menu .info-tab .view-menu .travel {
+        width: 280px; }
+        .menu .info-tab .view-menu .travel .journey {
+          padding: 0 40px 20px 37px;
+          display: none;
+          background: white;
+          border-radius: 0 0 30px 30px;
+          position: absolute;
+          width: 280px; }
+          .menu .info-tab .view-menu .travel .journey__items:hover {
+            background: rgba(196, 196, 196, 0.3);
+            border-radius: 15px;
+            cursor: pointer; }
+          .menu .info-tab .view-menu .travel .journey__items {
+            padding-left: 9px;
             font-family: "MuseoSansCyrl_1";
-            font-size: 12px;
-            line-height: 14px;
-            color: #000000;
-            padding-left: 30px;
-            padding-right: 40px; }
-          .menu .info-tab .view-menu .contant-review .main-menu__date {
-            padding-right: 30px; }
-          .menu .info-tab .view-menu .contant-review .main-menu__shift {
+            font-size: 14px;
+            line-height: 30px;
+            color: #000000; }
+        .menu .info-tab .view-menu .travel .travels {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          cursor: pointer;
+          background: white;
+          height: 49px;
+          padding: 18px 0px 10px 30px;
+          border-radius: 29.5px;
+          margin-top: 18px; }
+          .menu .info-tab .view-menu .travel .travels__shift {
             width: 5px;
             height: 5px;
             margin-left: 8px;
@@ -408,40 +535,12 @@ h1, h2, h3, h4, h5, h6 {
             -o-transition: transform .5s ease;
             transition: transform .5s ease;
             transition: transform .5s ease, -webkit-transform .5s ease; }
-      .menu .info-tab .view-menu .travels {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        cursor: pointer;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        background: white;
-        height: 49px;
-        width: 280px;
-        border-radius: 29.5px;
-        margin-top: 18px; }
-        .menu .info-tab .view-menu .travels__shift {
-          width: 5px;
-          height: 5px;
-          margin-left: 8px;
-          border-left: 1px solid #181616;
-          border-top: 1px solid #181616;
-          -webkit-transform: rotate(-135deg);
-          -ms-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-          -webkit-transition: -webkit-transform .5s ease;
-          transition: -webkit-transform .5s ease;
-          -o-transition: transform .5s ease;
-          transition: transform .5s ease;
-          transition: transform .5s ease, -webkit-transform .5s ease; }
-        .menu .info-tab .view-menu .travels__text {
-          font-family: "MuseoSansCyrl_1";
-          font-size: 12px;
-          line-height: 14px;
-          color: #000000;
-          padding-left: 30px;
-          padding-right: 122px; }
+          .menu .info-tab .view-menu .travel .travels__text {
+            font-family: "MuseoSansCyrl_1";
+            margin-right: 121px;
+            font-size: 12px;
+            line-height: 14px;
+            color: #000000; }
     .menu .info-tab .contact {
       bottom: 55px;
       position: absolute; }
@@ -514,6 +613,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 430px) {
   .container {
     padding: 0 18px; }
+    .container .inquiries .confirm:hover .confirm__agreement {
+      background: white; }
     .container .about-communication {
       display: inherit; }
       .container .about-communication__items {
@@ -531,6 +632,8 @@ h1, h2, h3, h4, h5, h6 {
           -webkit-box-align: end;
           -ms-flex-align: end;
           align-items: flex-end; }
+          .container .about-communication__items .choice .social-network:hover .social-network__choose {
+            background: white; }
           .container .about-communication__items .choice .social-network:nth-child(3), .container .about-communication__items .choice .social-network:nth-child(4) {
             margin-top: 0; }
       .container .about-communication .about {

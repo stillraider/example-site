@@ -335,27 +335,174 @@
                 display: flex;
                 .main-menu:last-child {
                     width: 120px;
+                    margin-right: 0;
                 }
                 .main-menu {
                     width: 150px;
-                    display: flex;
                     cursor: pointer;
                     align-items: center;
+                    height: 49px;
                     background: white;
                     margin-right: 10px;
-                    height: 49px;
                     border-radius: 29.5px;
-                    &__country, &__date{
+                    .calendar {
+                        display: none;
+                        position: absolute;
+                        background: white;
+                        padding: 0 10px;
+                        z-index: 50;
+                        border-radius: 0 0 30px 30px;
+                        &__text {
+                            font-family: "MuseoSansCyrl_1";
+                            font-size: 12px;
+                            line-height: 14px;
+                            text-align: center;
+                            margin-bottom: 18px;
+                            color: #000000;
+                        }
+                        #calendar2 {
+                            width: 100%;
+                            font: monospace;
+                            line-height: 1.2em;
+                            font-size: 15px;
+                            text-align: center;
+                            & tr td {
+                                padding: 8px;
+                                font-family: "MuseoSansCyrl_1";
+                            }
+                        }
+                        #calendar2 thead tr:last-child {
+                            font-size: small;
+                            color: black;
+                        }
+                        #calendar2 thead tr:nth-child(1) td:nth-child(2) {
+                            color: black;
+                            font-family: "MuseoSansCyrl_1";
+                        }
+                        #calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {
+                            cursor: pointer;
+                        }
+                        #calendar2 tbody td {
+                            color: black;
+                        }
+                        #calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+                            color: black;
+                        }
+                        #calendar2 tbody td.today {
+                            background: #FFD241;
+                            border: 1px solid black;
+                            color: black;
+                        }
+                    }
+                    .small-block {
+                        display: flex;
+                        padding: 16px 0 19px 30px;
+                        border-radius: 29.5px;
+                        &__country, &__date{
+                            font-family: "MuseoSansCyrl_1";
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #000000;
+                            padding-right: 40px;
+                        }
+                        &__date {
+                            padding-right: 30px;
+                        }
+                        &__shift {
+                            width: 5px;
+                            height: 5px;
+                            margin: 4px 0 0 8px;
+                            border-left: 1px solid rgb(24, 22, 22);
+                            border-top: 1px solid rgb(24, 22, 22);
+                            transform: rotate(-135deg);
+                            transition: transform .5s ease;
+                        }
+                    }
+                    ::-webkit-scrollbar {
+                        width: 2px;
+                    }
+                    ::-webkit-scrollbar-track {
+                        background: white;
+                    }
+                    ::-webkit-scrollbar-thumb {
+                        height: 10px;
+                        background: #C4C4C4;
+                        border-radius: 1px;
+                    }
+                    .dropped-list {
+                        position: absolute;
+                        background: white;
+                        overflow-x: hidden !important;
+                        height: 315px;
+                        overflow: scroll;
+                        display: none;
+                        padding: 0 10px;
+                        width: 150px;
+                        border-radius: 0 0 30px 30px;
+                        .continents {
+                            &__text {
+                                font-family: "MuseoSansCyrl_2";
+                                margin-bottom: 29px;
+                                font-size: 14px;
+                                color: #000000;
+                            }
+                            .countrys {
+                                display: none;
+                                &__items:hover {
+                                    background: rgba(196, 196, 196, 0.3);
+                                }
+                                &__items {
+                                    font-family: "MuseoSansCyrl_1";
+                                    border-radius: 15px;
+                                    padding-left: 13px;
+                                    font-size: 14px;
+                                    line-height: 30px;
+                                    color: #000000;
+                                }
+                                .all-tours {
+                                    font-family: "MuseoSansCyrl_1";
+                                    margin-left: 13px;
+                                    font-size: 10px;
+                                    margin: 10px 0 10px 15px;
+                                    line-height: 18px;
+                                    text-transform: uppercase;
+                                    color: #FFD241;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .travel {
+                width: 280px;
+                .journey {
+                    padding: 0 40px 20px 37px;
+                    display: none;
+                    background: white;
+                    border-radius: 0 0 30px 30px;
+                    position: absolute;
+                    width: 280px;
+                    &__items:hover {
+                        background: rgba(196, 196, 196, 0.3);
+                        border-radius: 15px;
+                        cursor: pointer;
+                    }
+                    &__items {
+                        padding-left: 9px;
                         font-family: "MuseoSansCyrl_1";
-                        font-size: 12px;
-                        line-height: 14px;
+                        font-size: 14px;
+                        line-height: 30px;
                         color: #000000;
-                        padding-left: 30px;
-                        padding-right: 40px;
                     }
-                    &__date {
-                        padding-right: 30px;
-                    }
+                }
+                .travels {
+                    display: flex;
+                    cursor: pointer;
+                    background: white;
+                    height: 49px;
+                    padding: 18px 0px 10px 30px;
+                    border-radius: 29.5px;
+                    margin-top: 18px;
                     &__shift {
                         width: 5px;
                         height: 5px;
@@ -365,33 +512,13 @@
                         transform: rotate(-135deg);
                         transition: transform .5s ease;
                     }
-                }
-            }
-            .travels {
-                display: flex;
-                cursor: pointer;
-                align-items: center;
-                background: white;
-                height: 49px;
-                width: 280px;
-                border-radius: 29.5px;
-                margin-top: 18px;
-                &__shift {
-                    width: 5px;
-                    height: 5px;
-                    margin-left: 8px;
-                    border-left: 1px solid rgb(24, 22, 22);
-                    border-top: 1px solid rgb(24, 22, 22);
-                    transform: rotate(-135deg);
-                    transition: transform .5s ease;
-                }
-                &__text {
-                    font-family: "MuseoSansCyrl_1";
-                    font-size: 12px;
-                    line-height: 14px;
-                    color: #000000;
-                    padding-left: 30px;
-                    padding-right: 122px;
+                    &__text {
+                        font-family: "MuseoSansCyrl_1";
+                        margin-right: 121px;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #000000;
+                    }
                 }
             }
         }
@@ -503,6 +630,11 @@
 @media (max-width: 430px) {
     .container {
         padding: 0 18px;
+        .inquiries {
+            .confirm:hover .confirm__agreement {
+                background: white;
+            }
+        }
         .about-communication {
             display: inherit;
             &__items {
@@ -515,6 +647,9 @@
                     display: flex;
                     justify-content: center;
                     align-items: flex-end;
+                    .social-network:hover .social-network__choose{
+                        background: white;
+                    }
                     .social-network:nth-child(3), .social-network:nth-child(4) {
                         margin-top: 0;
                     }
