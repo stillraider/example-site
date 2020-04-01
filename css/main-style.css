@@ -79,6 +79,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'MuseoSansCyrl_0';
   src: url("../fonts/MuseoSansCyrl_0.otf"); }
 
+.container .about-communication .choice .social-network__choose .check-mark, .container .inquiries .confirm__agreement .check-mark, .over-menu {
+  width: 100%;
+  height: 100%; }
+
 .nav {
   background: #FFD241;
   display: -webkit-box;
@@ -285,9 +289,7 @@ h1, h2, h3, h4, h5, h6 {
           border-radius: 3px; }
           .container .about-communication .choice .social-network__choose .check-mark {
             background: url("../images/choice/Vector.svg") no-repeat center;
-            display: none;
-            width: 100%;
-            height: 100%; }
+            display: none; }
   .container .inquiries .confirm {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -305,9 +307,7 @@ h1, h2, h3, h4, h5, h6 {
       .container .inquiries .confirm__agreement .check-mark {
         background: url("../images/choice/Vector.svg") no-repeat center;
         background-size: 90%;
-        display: none;
-        width: 100%;
-        height: 100%; }
+        display: none; }
     .container .inquiries .confirm .confirm-info {
       margin-left: 15px; }
       .container .inquiries .confirm .confirm-info__title {
@@ -356,8 +356,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all .4s ease-in-out;
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
-  width: 100%;
-  height: 100%;
   position: absolute;
   z-index: 40;
   display: -webkit-box;
@@ -437,6 +435,10 @@ h1, h2, h3, h4, h5, h6 {
               display: none;
               position: absolute;
               background: white;
+              -webkit-transform: translate(0px, -20px);
+              -ms-transform: translate(0px, -20px);
+              transform: translate(0px, -20px);
+              padding-top: 30px !important;
               padding: 0 15px;
               width: 280px;
               z-index: 50;
@@ -473,6 +475,12 @@ h1, h2, h3, h4, h5, h6 {
                 background: #FFD241;
                 border: 1px solid black;
                 color: black; }
+            .over-menu .menu .info-tab .view-menu .contant-review .main-menu .small-block:nth-child(1) {
+              position: relative;
+              z-index: 51; }
+            .over-menu .menu .info-tab .view-menu .contant-review .main-menu .small-block:nth-child(2) {
+              position: relative;
+              z-index: 41; }
             .over-menu .menu .info-tab .view-menu .contant-review .main-menu .small-block {
               display: -webkit-box;
               display: -ms-flexbox;
@@ -501,14 +509,20 @@ h1, h2, h3, h4, h5, h6 {
                 font-size: 12px;
                 line-height: 14px;
                 color: #000000; }
+            .over-menu .menu .info-tab .view-menu .contant-review .main-menu .drop:nth-child(1) {
+              z-index: 50; }
+            .over-menu .menu .info-tab .view-menu .contant-review .main-menu .drop:nth-child(2) {
+              z-index: 40; }
             .over-menu .menu .info-tab .view-menu .contant-review .main-menu .drop {
               width: 280px;
               height: 315px;
               position: absolute;
               background: white;
-              width: 280px;
+              -webkit-transform: translate(0px, -20px);
+              -ms-transform: translate(0px, -20px);
+              transform: translate(0px, -20px);
+              padding-top: 30px;
               display: none;
-              z-index: 50;
               border-radius: 0 0 30px 30px;
               overflow: scroll;
               overflow-x: hidden !important; }
@@ -550,7 +564,11 @@ h1, h2, h3, h4, h5, h6 {
           width: 100%;
           max-width: 280px; }
           .over-menu .menu .info-tab .view-menu .travel .journey {
-            padding: 0 40px 20px 37px;
+            z-index: 30;
+            padding: 27px 40px 20px 37px;
+            -webkit-transform: translate(0px, -20px);
+            -ms-transform: translate(0px, -20px);
+            transform: translate(0px, -20px);
             display: none;
             background: white;
             border-radius: 0 0 30px 30px;
@@ -571,6 +589,8 @@ h1, h2, h3, h4, h5, h6 {
             display: -ms-flexbox;
             display: flex;
             cursor: pointer;
+            position: relative;
+            z-index: 31;
             background: white;
             height: 49px;
             padding: 18px 0px 10px 30px;
@@ -616,38 +636,41 @@ h1, h2, h3, h4, h5, h6 {
           text-transform: uppercase;
           padding: 18px 0;
           color: #000000; }
-      .over-menu .menu .info-tab .contact__phone {
-        font-family: "MuseoSansCyrl_3";
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-        text-align: center;
-        color: #141414;
-        margin-bottom: 24px; }
-      .over-menu .menu .info-tab .contact .pick-up {
-        border: 1px solid #000000;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        border-radius: 29.5px;
-        cursor: pointer;
-        width: 100%;
-        margin: 0 auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        height: 49px; }
-        .over-menu .menu .info-tab .contact .pick-up__text {
-          font-family: "MuseoSansCyrl_1";
-          text-transform: uppercase;
-          font-size: 12px;
-          color: #000000; }
+      .over-menu .menu .info-tab .contact {
+        position: absolute;
+        bottom: 44px; }
+        .over-menu .menu .info-tab .contact__phone {
+          font-family: "MuseoSansCyrl_3";
+          font-style: normal;
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 29px;
+          text-align: center;
+          color: #141414;
+          margin-bottom: 24px; }
+        .over-menu .menu .info-tab .contact .pick-up {
+          border: 1px solid #000000;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border-radius: 29.5px;
+          cursor: pointer;
+          width: 280px;
+          margin: 0 auto;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          height: 49px; }
+          .over-menu .menu .info-tab .contact .pick-up__text {
+            font-family: "MuseoSansCyrl_1";
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #000000; }
     .over-menu .menu .list-info__text {
       font-family: "MuseoSansCyrl_3";
       text-transform: uppercase;
@@ -679,6 +702,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 49% !important; } }
 
 @media (max-width: 780px) {
+  .info-tab .contact {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-bottom: 44px; }
   .about-communication__items:nth-child(2) {
     width: 49% !important; } }
 

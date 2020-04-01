@@ -1,6 +1,14 @@
 @import "nulling-styles.scss";
 @import "style-for-fonts.scss";
 
+%w-h {
+    width: 100%;
+    height: 100%;
+}
+%d-j-a {
+
+}
+
 .nav {
     background: #FFD241;
     display: flex;
@@ -239,8 +247,7 @@
                     .check-mark {
                         background: url("../images/choice/Vector.svg") no-repeat center;
                         display: none;
-                        width: 100%;
-                        height: 100%;
+                        @extend %w-h;
                     }
                 }
             }
@@ -264,8 +271,7 @@
                     background: url("../images/choice/Vector.svg") no-repeat center;
                     background-size: 90%;
                     display: none;
-                    width: 100%;
-                    height: 100%;
+                    @extend %w-h;;
                 }
             }
             .confirm-info {
@@ -321,8 +327,7 @@
 .over-menu {
     background: rgba(0, 0, 0, 0.3);
     transition: all .4s ease-in-out;
-    width: 100%;
-    height: 100%;
+    @extend %w-h;
     position: absolute;
     z-index: 40;
     display: flex;
@@ -386,6 +391,8 @@
                             display: none;
                             position: absolute;
                             background: white;
+                            transform: translate(0px, -20px);
+                            padding-top: 30px !important;
                             padding: 0 15px;
                             width: 280px;
                             z-index: 50;
@@ -432,6 +439,14 @@
                                 color: black;
                             }
                         }
+                        .small-block:nth-child(1) {
+                            position: relative;
+                            z-index: 51;
+                        }
+                        .small-block:nth-child(2) {
+                            position: relative;
+                            z-index: 41;
+                        }
                         .small-block {
                             display: flex;
                             padding: 16px 0 19px 30px;
@@ -456,14 +471,20 @@
                                 color: #000000;
                             }
                         }
+                        .drop:nth-child(1) {
+                            z-index: 50;
+                        }
+                        .drop:nth-child(2) {
+                            z-index: 40;
+                        }
                         .drop {
                             width: 280px;
                             height: 315px;
                             position: absolute;
                             background: white;
-                            width: 280px;
+                            transform: translate(0px, -20px);
+                            padding-top: 30px;
                             display: none;
-                            z-index: 50;
                             border-radius: 0 0 30px 30px;
                             overflow: scroll;
                             overflow-x: hidden !important;
@@ -519,7 +540,9 @@
                     width: 100%;
                     max-width: 280px;
                     .journey {
-                        padding: 0 40px 20px 37px;
+                        z-index: 30;
+                        padding: 27px 40px 20px 37px;
+                        transform: translate(0px, -20px);                    
                         display: none;
                         background: white;
                         border-radius: 0 0 30px 30px;
@@ -541,6 +564,8 @@
                     .travels {
                         display: flex;
                         cursor: pointer;
+                        position: relative;
+                        z-index: 31;
                         background: white;
                         height: 49px;
                         padding: 18px 0px 10px 30px;
@@ -585,6 +610,8 @@
                 }
             }
             .contact {
+                position: absolute;
+                bottom: 44px;
                 &__phone {
                     font-family: "MuseoSansCyrl_3";
                     font-style: normal;
@@ -600,7 +627,7 @@
                     box-sizing: border-box;
                     border-radius: 29.5px;
                     cursor: pointer;
-                    width: 100%;
+                    width: 280px;
                     margin: 0 auto;
                     display: flex;
                     justify-content: center;
@@ -660,6 +687,13 @@
     }
 }
 @media (max-width: 780px) {
+    .info-tab {
+        .contact {
+            position: relative !important;
+            bottom: 0 !important;
+            margin-bottom: 44px;
+        }
+    }
     .about-communication {
         &__items:nth-child(2) {
             width: 49% !important;

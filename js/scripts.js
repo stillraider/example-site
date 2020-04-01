@@ -1,12 +1,44 @@
 $(function(){
-    var checkboxs = $(".checkbox");
+    var overMenu = $(".over-menu");
+    var body = $("body");
 
-    checkboxs.click(function(){
-        var mark = $(this).find(".check-mark");
-        if(mark.is(":hidden")) mark.show();
-        else mark.hide();
+    $(".checkbox").click(function(){
+        SwitchActive($(this).find(".check-mark"));
     });
 
+    $(".small-block, .travels").click(function(){
+        SwitchActiveAndRotateArrow($(this).parent().find(".drop, .calendar, .journey"));
+    });
+
+    $(".continents__text").click(function(){
+        SwitchActive($(this).parent().find(".countrys"));
+    });
+
+    $(".cross").click(()=> ControlMenu("none", "0", "hidden scroll"));
+    $(".burger").click(()=> ControlMenu("all", "1", "hidden"));
+
+    function ControlMenu(pointerEvents, opacity, overflow) {
+        overMenu.css("pointer-events", pointerEvents);
+        overMenu.css("opacity", opacity);
+        body.css("overflow", overflow);
+    }
+
+    function SwitchActiveAndRotateArrow(element) {
+        let setRotateArrow = (rotateParam) => element.parent().find(".wrap__shift").css("transform", rotateParam);
+        if(element.is(":hidden")){
+            element.show();
+            setRotateArrow("rotate(45deg)");
+        }
+        else {
+            element.hide();
+            setRotateArrow("rotate(-135deg)");
+        }
+    }
+
+    function SwitchActive(element) {
+        if(element.is(":hidden")) element.show();
+        else element.hide();
+    }
     $("#phone").mask("+7 999 999 9999");
 })
 
@@ -40,88 +72,14 @@ function Calendar2(id, year, month) {
     if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
         document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
     }
-    }
-    Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
-    // переключатель минус месяц
-    document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
-      Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
-    }
-    // переключатель плюс месяц
-    document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
-      Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
-    }
-
-
-var classik = document.getElementsByClassName("main-menu");
-var drop = document.getElementsByClassName("drop");
-var pip = true;
-var tyu = true;
-var countrys = document.getElementsByClassName("countrys");
-var shift = document.getElementsByClassName("small-block__shift");
-var calind = document.getElementsByClassName("calendar");
-var travels = document.getElementsByClassName("travels");
-var journey = document.getElementsByClassName("journey");
-var over = document.getElementsByClassName("over-menu");
-var htm = document.getElementsByTagName("body");
-
-function cros(param) {
-    if (tyu) {
-        over[0].style.pointerEvents = "none";
-        over[0].style.opacity = "0";
-        htm[0].style.overflow = "scroll";
-    }
+}
+Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
+// переключатель минус месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
+    Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
+}
+// переключатель плюс месяц
+document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(3)').onclick = function() {
+    Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)+1);
 }
 
-function ascent(param) {
-    if (pip) {
-        over[0].style.pointerEvents = "all";
-        over[0].style.opacity = "1";
-        htm[0].style.overflow = "hidden";
-    }
-}
-
-function press(param) {
-    if (pip) {
-        classik[0].style.borderRadius = "29.5px";
-        drop[0].style.display = "none";
-    }
-    else {
-        classik[0].style.borderRadius = "29.5px 29.5px 0 0";
-        drop[0].style.display = "block";
-    }
-    pip = !pip;
-}
-
-function trav(params) {
-    if (pip) {
-        travels[0].style.borderRadius = "29.5px 29.5px 0 0";
-        journey[0].style.display = "block";
-    }
-    else {
-        travels[0].style.borderRadius = "29.5px";
-        journey[0].style.display = "none";
-    }
-    pip = !pip;
-}
-
-function pressing(params) {
-    if (pip) {
-        classik[1].style.borderRadius = "29.5px 29.5px 0 0";
-        calind[0].style.display = "block";
-    }
-    else {
-        classik[1].style.borderRadius = "29.5px";
-        calind[0].style.display = "none";
-    }
-    pip = !pip;
-}
-
-function country(param) {
-    if (pip) {
-        countrys[0].style.display = "none";
-    }
-    else {
-        countrys[0].style.display = "block";
-    }
-    pip = !pip;
-}
