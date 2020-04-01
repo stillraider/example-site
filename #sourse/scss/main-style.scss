@@ -630,8 +630,8 @@
 
 @media (max-width: 900px) {
     .over-menu {
-        overflow: scroll;
         .menu {
+            overflow: scroll !important;
             width: 100%;
             .view-menu {
                 margin-bottom: 0 !important;

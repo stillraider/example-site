@@ -657,25 +657,24 @@ h1, h2, h3, h4, h5, h6 {
       color: #141414; }
 
 @media (max-width: 900px) {
-  .over-menu {
-    overflow: scroll; }
-    .over-menu .menu {
-      width: 100%; }
-      .over-menu .menu .view-menu {
-        margin-bottom: 0 !important;
-        pointer-events: initial !important; }
-      .over-menu .menu .find-tour {
-        display: -webkit-box !important;
-        display: -ms-flexbox !important;
-        display: flex !important;
-        margin: 14px 0 30px 0; }
-      .over-menu .menu .contant-review {
-        display: inherit !important; }
-        .over-menu .menu .contant-review .main-menu {
-          width: 100% !important;
-          max-width: inherit !important; }
-        .over-menu .menu .contant-review .main-menu:nth-child(2) {
-          margin-top: 18px; }
+  .over-menu .menu {
+    overflow: scroll !important;
+    width: 100%; }
+    .over-menu .menu .view-menu {
+      margin-bottom: 0 !important;
+      pointer-events: initial !important; }
+    .over-menu .menu .find-tour {
+      display: -webkit-box !important;
+      display: -ms-flexbox !important;
+      display: flex !important;
+      margin: 14px 0 30px 0; }
+    .over-menu .menu .contant-review {
+      display: inherit !important; }
+      .over-menu .menu .contant-review .main-menu {
+        width: 100% !important;
+        max-width: inherit !important; }
+      .over-menu .menu .contant-review .main-menu:nth-child(2) {
+        margin-top: 18px; }
   .about-communication__items:nth-child(2) {
     width: 49% !important; } }
 

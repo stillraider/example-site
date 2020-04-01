@@ -68,7 +68,7 @@ function cros(param) {
     if (tyu) {
         over[0].style.pointerEvents = "none";
         over[0].style.opacity = "0";
-
+        htm[0].style.overflow = "scroll";
     }
 }
 
@@ -76,7 +76,7 @@ function ascent(param) {
     if (pip) {
         over[0].style.pointerEvents = "all";
         over[0].style.opacity = "1";
-
+        htm[0].style.overflow = "hidden";
     }
 }
 
