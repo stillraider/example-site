@@ -291,9 +291,6 @@ h1, h2, h3, h4, h5, h6 {
             background: url("../images/choice/Vector.svg") no-repeat center;
             display: none; }
   .container .inquiries .confirm {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     margin-top: 39px;
     cursor: pointer; }
     .container .inquiries .confirm:hover .confirm__agreement {
@@ -301,6 +298,7 @@ h1, h2, h3, h4, h5, h6 {
     .container .inquiries .confirm__agreement {
       width: 15px;
       height: 15px;
+      float: left;
       background: #FFFFFF;
       border: 1px solid #E7E7E7;
       border-radius: 3px; }
@@ -309,7 +307,7 @@ h1, h2, h3, h4, h5, h6 {
         background-size: 90%;
         display: none; }
     .container .inquiries .confirm .confirm-info {
-      margin-left: 15px; }
+      margin-left: 30px; }
       .container .inquiries .confirm .confirm-info__title {
         font-family: "MuseoSansCyrl_1";
         margin-bottom: 11px;

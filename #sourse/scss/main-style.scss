@@ -255,7 +255,6 @@
     }
     .inquiries {
         .confirm {
-            display: flex;
             margin-top: 39px;
             cursor: pointer;
             &:hover .confirm__agreement {
@@ -264,6 +263,7 @@
             &__agreement {
                 width: 15px;
                 height: 15px;
+                float: left;
                 background: #FFFFFF;
                 border: 1px solid #E7E7E7;
                 border-radius: 3px;
@@ -275,7 +275,7 @@
                 }
             }
             .confirm-info {
-                margin-left: 15px;
+                margin-left: 30px;
                 &__title {
                     font-family: "MuseoSansCyrl_1";
                     margin-bottom: 11px;
