@@ -330,7 +330,6 @@
 }
 .over-menu {
     background: rgba(0, 0, 0, 0.3);
-    transition: all .4s ease-in-out;
     @extend %w-h;
     position: absolute;
     z-index: 40;

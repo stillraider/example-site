@@ -360,9 +360,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .over-menu {
   background: rgba(0, 0, 0, 0.3);
-  -webkit-transition: all .4s ease-in-out;
-  -o-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
   position: absolute;
   z-index: 40;
   display: -webkit-box;
