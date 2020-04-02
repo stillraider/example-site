@@ -334,7 +334,8 @@ h1, h2, h3, h4, h5, h6 {
     background: #FFD241;
     border-radius: 29.5px;
     cursor: pointer;
-    width: 280px;
+    width: 100%;
+    max-width: 280px;
     height: 49px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -786,3 +787,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 100% !important; }
         .container .contant-center .input-info .input-info__name {
           margin: 20px 0 8px  0 !important; } }
+
+@media (max-width: 315px) {
+  .container .title__text {
+    font-size: 2em !important; } }

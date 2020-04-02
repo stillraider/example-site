@@ -312,7 +312,8 @@
         background: #FFD241;
         border-radius: 29.5px;
         cursor: pointer;
-        width: 280px;
+        width: 100%;
+        max-width: 280px;
         height: 49px;
         display: flex;
         align-items: center;
@@ -806,6 +807,15 @@
                 .input-info__name {
                     margin: 20px 0 8px  0 !important;
                 }
+            }
+        }
+    }
+}
+@media (max-width: 315px) {
+    .container {
+        .title {
+            &__text {
+                font-size: 2em !important;
             }
         }
     }
