@@ -48,18 +48,27 @@
     .catalog-flex {
         display: flex;
         flex-wrap: wrap;
-        .catalog:nth-child(1), .catalog:nth-child(3)  {
+        .catalog-links {
+            cursor: pointer;
+            width: 48.6%;
+            max-width: 380px;
+        }
+        .catalog-links:nth-child(1), .catalog-links:nth-child(3) {
             margin-right: 2.8%;
         }
         .catalog {
-            width: 48.6%;
-            max-width: 380px;
             cursor: pointer;
             margin-bottom: 56px;
+            &:hover .product__img {
+                transform: scale(1.1);
+            }
             .product {
+                position: relative;
+                overflow: hidden;
                 &__img {
                     background: url(../images/117_anons-min_480_275_5_90.svg) no-repeat center;
                     background-size: cover !important;
+                    transition: all .5s;
                     display: flex;
                     align-items: flex-end;
                     width: 100%;
@@ -68,6 +77,8 @@
                 &__price {
                     font-family: "MuseoSansCyrl_3";
                     background-color: #ffd141;
+                    position: absolute;
+                    bottom: 0;
                     height: 42px;
                     width: 160px;
                     text-align: center;
@@ -255,12 +266,13 @@
     .inquiries {
         .confirm {
             margin-top: 39px;
+            display: flex;
             cursor: pointer;
             &:hover .confirm__agreement {
                 background: #F0F0F0;
             }
             &__agreement {
-                width: 15px;
+                flex: 0 0 15px;
                 height: 15px;
                 float: left;
                 background: #FFFFFF;
@@ -274,7 +286,7 @@
                 }
             }
             .confirm-info {
-                margin-left: 30px;
+                margin-left: 15px;
                 &__title {
                     font-family: "MuseoSansCyrl_1";
                     margin-bottom: 11px;
@@ -329,10 +341,8 @@
     @extend %w-h;
     position: absolute;
     z-index: 40;
-    display: flex;
+    display: none;
     justify-content: flex-end;
-    pointer-events: none;
-    opacity: 0;
     .menu {
         width: 50%;
         z-index: 50;
@@ -769,7 +779,7 @@
         .flight, .catalog {
             margin-bottom: 0 !important;
         }
-        .catalog-flex .catalog  {
+        .catalog-flex .catalog-links  {
             width: 100%;
             max-width: none;
             margin-right: 0 !important;
@@ -779,20 +789,20 @@
                 margin: 12px 0 31px 0;
             }
         }
-        .catalog:nth-child(1) {
+        .catalog-links:nth-child(1) {
             margin-right: 2.8%;
             border-top: 2px solid #C4C4C4;
             padding: 30px 0 34px;
         }
-        .catalog:nth-child(2) {
+        .catalog-links:nth-child(2) {
             padding-bottom: 34px;
         }
-        .catalog:nth-child(3) {
+        .catalog-links:nth-child(3) {
             padding-bottom: 33px;
             margin-bottom: 16px;
             border-bottom: 2px solid #C4C4C4;
         }
-        .catalog:nth-child(4) {
+        .catalog-links:nth-child(4) {
             display: none;
         }
         .title:first-child {

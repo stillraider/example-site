@@ -14,13 +14,11 @@ $(function(){
         SwitchActive($(this).parent().find(".countrys"));
     });
 
-    $(".cross").click(()=> ControlMenu("none", "0", "hidden scroll"));
-    $(".burger").click(()=> ControlMenu("all", "1", "hidden"));
+    $(".cross").click(()=> ControlMenu("none"));
+    $(".burger").click(()=> ControlMenu("flex"));
 
-    function ControlMenu(pointerEvents, opacity, overflow) {
-        overMenu.css("pointer-events", pointerEvents);
-        overMenu.css("opacity", opacity);
-        body.css("overflow", overflow);
+    function ControlMenu(block) {
+        overMenu.css("display", block);
     }
 
     function SwitchActiveAndRotateArrow(element) {
