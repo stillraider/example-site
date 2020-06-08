@@ -1,6 +1,7 @@
 $(function(){
     var overMenu = $(".over-menu");
-
+    var body = $("body");
+    
     $(".checkbox").click(function(){
         SwitchActive($(this).find(".check-mark"));
     });
@@ -13,11 +14,12 @@ $(function(){
         SwitchActive($(this).parent().find(".countrys"));
     });
 
-    $(".cross").click(()=> ControlMenu("none"));
-    $(".burger").click(()=> ControlMenu("flex"));
+    $(".cross").click(()=> ControlMenu("none", "hidden scroll"));
+    $(".burger").click(()=> ControlMenu("flex", "hidden"));
 
-    function ControlMenu(block) {
-        overMenu.css("display", block);
+    function ControlMenu(opacity, overflow) {
+        overMenu.css("display", opacity);
+        body.css("overflow", overflow);
     }
 
     function SwitchActiveAndRotateArrow(element) {
