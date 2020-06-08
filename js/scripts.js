@@ -1,6 +1,5 @@
 $(function(){
     var overMenu = $(".over-menu");
-    var body = $("body");
 
     $(".checkbox").click(function(){
         SwitchActive($(this).find(".check-mark"));
